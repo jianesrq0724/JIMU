@@ -10,10 +10,19 @@ JIMU（积木）是一套Android组件化框架，支持组件的代码资源隔
 
 ### 最新版本
 
+[release-note&change-logs](https://github.com/mqzhangw/JIMU/releases) 关注版本变更以及注意事项是个好习惯。
+
 模块|build-gradle|componentlib|router-anno-compiler|router-annotation
 ---|---|---|---|---
 最新版本|[![Download](https://api.bintray.com/packages/zhmqq0527/compbuild/build-gradle/images/download.svg)](https://bintray.com/zhmqq0527/compbuild/build-gradle/_latestVersion)|[![Download](https://api.bintray.com/packages/zhmqq0527/compbuild/componentlib/images/download.svg)](https://bintray.com/zhmqq0527/compbuild/componentlib/_latestVersion)|[![Download](https://api.bintray.com/packages/zhmqq0527/compbuild/router-anno-compiler/images/download.svg)](https://bintray.com/zhmqq0527/compbuild/router-anno-compiler/_latestVersion)|[![Download](https://api.bintray.com/packages/zhmqq0527/compbuild/router-annotation/images/download.svg)](https://bintray.com/zhmqq0527/compbuild/router-annotation/_latestVersion)
 
+仓库2：
+
+模块|build-gradle|componentlib|router-anno-compiler|router-annotation
+---|---|---|---|---
+最新版本|[![Download](https://api.bintray.com/packages/leobert-lan-oss/maven/build-gradle/images/download.svg)](https://api.bintray.com/packages/leobert-lan-oss/maven/build-gradle/_latestVersion)|[![Download](https://api.bintray.com/packages/leobert-lan-oss/maven/componentlib/images/download.svg)](https://bintray.com/leobert-lan-oss/maven/componentlib/_latestVersion)|[![Download](https://api.bintray.com/packages/leobert-lan-oss/maven/router-anno-compiler/images/download.svg)](https://bintray.com/leobert-lan-oss/maven/router-anno-compiler/_latestVersion)|[![Download](https://api.bintray.com/packages/leobert-lan-oss/maven/router-annotation/images/download.svg)](https://bintray.com/leobert-lan-oss/maven/router-annotation/_latestVersion)
+
+*因为没有创建组织账号，可能会发布到不同的仓库，出现版本差异时请关注下release-note*
 
 ### 实现功能：
 - 组件可以单独调试
@@ -47,15 +56,16 @@ mainmodulename=app
 ```gradle
 buildscript {
     dependencies {
-        classpath 'com.luojilab.ddcomponent:build-gradle:1.2.0'
+        classpath 'com.github.jimu:build-gradle:A.B.C'
     }
 }
 ```
+*current lastest version 1.3.2 has just post a request to includeed in the bintray's jCenter,maybe you cannot fetch it before the request has been approved*
 
 为每个组件引入依赖库，如果项目中存在basiclib等基础库，可以统一交给basiclib引入
 
 ```gradle
-compile 'com.luojilab.ddcomponent:componentlib:1.3.0'
+compile 'com.github.jimu:componentlib:A.B.C'
 ```
 
 #### 2、拆分组件为module工程
